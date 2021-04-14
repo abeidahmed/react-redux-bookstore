@@ -1,3 +1,5 @@
+import { v4 as uuid } from 'uuid';
+
 const BookForm = () => {
   const categories = [
     'Action',
@@ -15,9 +17,8 @@ const BookForm = () => {
         <div>
           <input type="text" id="title" autoComplete="off" />
           <select>
-            {categories.map((category, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <option value={category} key={index}>
+            {categories.map((category) => (
+              <option value={category} key={uuid()}>
                 {category}
               </option>
             ))}
