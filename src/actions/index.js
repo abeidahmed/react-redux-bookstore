@@ -1,5 +1,5 @@
 const addBook = (book) => ({
-  type: 'ADD_BOOK',
+  type: 'CREATE_BOOK',
   payload: book,
 });
 
@@ -8,4 +8,4 @@ const removeBook = (book) => ({
   payload: book,
 });
 
-export default { addBook, removeBook };
+export { addBook, removeBook };
