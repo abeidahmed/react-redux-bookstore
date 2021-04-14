@@ -15,7 +15,7 @@ const categories = [
 
 const BookForm = () => {
   const dispatch = useDispatch();
-  const [data, setData] = useState({ title: '', category: '' });
+  const [data, setData] = useState({ title: '', category: categories[0] });
 
   const handleChange = (event) => {
     setData({ ...data, [event.target.name]: event.target.value });
@@ -24,6 +24,8 @@ const BookForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     dispatch(addBook(data));
+    setData({ title: '', category: categories[0] });
+    event.target.reset();
   };
 
   return (
