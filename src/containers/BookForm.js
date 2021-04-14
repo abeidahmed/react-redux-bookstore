@@ -13,7 +13,7 @@ const BookForm = () => {
     <div>
       <form>
         <div>
-          <input type="text" id="title" />
+          <input type="text" id="title" autoComplete="off" />
           <select>
             {categories.map((category, index) => (
               // eslint-disable-next-line react/no-array-index-key
@@ -22,6 +22,9 @@ const BookForm = () => {
               </option>
             ))}
           </select>
+        </div>
+        <div>
+          <button type="submit">Submit book</button>
         </div>
       </form>
     </div>
