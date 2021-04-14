@@ -1,11 +1,11 @@
 const addBook = (book) => ({
-  type: 'ADD_BOOK',
+  type: 'CREATE_BOOK',
   payload: book,
 });
 
-const removeBook = (book) => ({
+const removeBook = (bookId) => ({
   type: 'REMOVE_BOOK',
-  payload: book,
+  payload: bookId,
 });
 
-export default { addBook, removeBook };
+export { addBook, removeBook };
